@@ -164,7 +164,7 @@ Tomcat服务器搭建成功
 
 **三、安装Mysql(ubuntu)**
 
-**Linux执行命令**
+**一、Linux执行命令(下载mysql，自行安装)**
 ```$xslt
 wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.26-linux-glibc2.12-x86_64.tar.gz
 ```
