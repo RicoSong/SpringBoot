@@ -19,7 +19,7 @@
 tar zxvf jdk-8u11-linux-x64.tar.gz
 ```
 
-![解压](image/linux1.png)
+![解压](https://leosong.top/My_Park/image/linux1.png)
 
 **配置环境变量,需输入以下指令**
 
@@ -35,7 +35,7 @@ export CLASSPATH=$:CLASSPATH:$JAVA_HOME/lib/
 export PATH=$PATH:$JAVA_HOME/bin                              
 ```
 
-![path](image/linux2.png)
+![path](https://leosong.top/My_Park/image/linux2.png)
 
 **使用 wq 保存并退出**
 
@@ -47,7 +47,7 @@ source /etc/profile
 
 **查看Java是否安装成功 ，执行命令：java -version**
 
-![version](image/linux3.png)
+![version](https://leosong.top/My_Park/image/linux3.png)
 
 **OK java 安装完成**
 
@@ -82,18 +82,18 @@ chmod u+x *.sh
 
 **再次启动**
 
-![tomcat](image/tomcat2.png)
+![tomcat](https://leosong.top/My_Park/image/tomcat2.png)
 
 Tomcat 启动成功
 在浏览器输入 服务器域名+端口号访问
 
-![tomcat](image/tomcat1.png)
+![tomcat](https://leosong.top/My_Park/image/tomcat1.png)
 
 Tomcat服务器搭建成功
 
 **Tomcat 关闭时报错**
 
-![shudown_error](image/tomcat_shutdown_error.png)
+![shudown_error](https://leosong.top/My_Park/image/tomcat_shutdown_error.png)
 
 **解决办法**
 
@@ -158,7 +158,7 @@ Tomcat服务器搭建成功
 ​		在tomcat 的安装目录的/bin目录下重启 tomcat服务
 
 在浏览器输入 https://域名
-	![success](image/success.png)
+	![success](https://leosong.top/My_Park/image/success.png)
 
 ------
 
@@ -190,7 +190,7 @@ sudo netstat -tap | grep mysql
 
 **安装成功图示**
 
-![mysql](image/mysql2.png)
+![mysql](https://leosong.top/My_Park/image/mysql2.png)
 
  **通过Navicat进行远程连接mysql**
 
@@ -215,7 +215,7 @@ sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
 
 ```
 
-![update](image/mysql3.png)
+![update](https://leosong.top/My_Park/image/mysql3.png)
 
 ​		重启mysql服务
 
@@ -225,5 +225,5 @@ service mysql restart
 ```
 
 ​		测试连接
-​		![test](image/test1.png)
+​		![test](https://leosong.top/My_Park/image/test1.png)
 
