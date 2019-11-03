@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class PublishController {
     @RequestMapping("/publish")
     public String publish(){
+        System.out.println("Rico number one");
         return "publish";
     }
 }
