@@ -1,0 +1,18 @@
+body{
+    background: #efefef;
+    padding-top: 70px;
+}
+.divmain{
+     margin-left: 30px;
+     margin-right: 30px;
+     margin-top: 10px;
+     background-color: white;
+ }
+.divright{
+    border: 1px silver;
+    margin: 15px;
+}
+.submitbootn{
+    float: right;
+    margin-bottom: 15px;
+}
