@@ -3,9 +3,9 @@ body{
     padding-top: 70px;
 }
 .divmain{
-     margin-left: 30px;
-     margin-right: 30px;
-     margin-top: 10px;
+     margin-left: 10%;
+     margin-right: 10%;
+     margin-top: 20px;
      background-color: white;
  }
 .divright{
@@ -15,4 +15,7 @@ body{
 .submitbootn{
     float: right;
     margin-bottom: 15px;
+}
+.textdiv{
+    margin: 15px;
 }
