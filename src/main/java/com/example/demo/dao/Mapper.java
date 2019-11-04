@@ -3,6 +3,7 @@ package com.example.demo.dao;
         import com.example.demo.pojo.Blog;
         import com.example.demo.pojo.Data;
         import org.apache.ibatis.annotations.Insert;
+        import org.apache.ibatis.annotations.Param;
         import org.apache.ibatis.annotations.Select;
         import org.springframework.stereotype.Repository;
 
@@ -21,4 +22,7 @@ public interface Mapper {
 
     @Select("select * from user limit #{firstPage},#{pageNumber}")
     List<Blog> limit_blog(int firstPage, int pageNumber);
+
+    @Select("select * from user where id=#{id}")
+    Blog findbyId(@Param(value = "id") int id);
 }

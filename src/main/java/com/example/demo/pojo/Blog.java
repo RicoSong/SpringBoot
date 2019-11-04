@@ -7,4 +7,5 @@ public class Blog {
     private String title;
     private String text;
     private String tag;
+    private Integer id;
 }

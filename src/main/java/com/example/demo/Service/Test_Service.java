@@ -33,4 +33,8 @@ public class Test_Service {
         int page=(firstPage-1)*pageNumber;
         return mapper.limit_blog(page,pageNumber);
     }
+
+    public Blog findbyId(int id) {
+        return mapper.findbyId(id);
+    }
 }

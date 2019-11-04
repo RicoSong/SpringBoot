@@ -35,7 +35,6 @@ public class Hander {
 
         List<Blog> blogs = test_service.limit_blog(firstPage,pageNumber);
         limit.setPage(firstPage);
-
         limit.setTotal(total);
         limit.setBlogs(blogs);
         model.addAttribute("limit",limit);
@@ -43,15 +42,6 @@ public class Hander {
         return "index";
     }
 
-    @RequestMapping("/index")
-    public String select(Model model) {
-      /*  List<Data> select = test_service.select();
-        return null;*/
-        List<Blog> blogs = test_service.select();
-        model.addAttribute("blogs",blogs);
-        System.out.println(blogs);
-        return "index";
-    }
     @RequestMapping("/insert")
     public String insert(Blog blog,Model model){
         System.out.println(blog.getTitle()+" "+blog.getText()+" "+blog.getTag());
@@ -60,8 +50,13 @@ public class Hander {
         blog.setText("welcome to tihs page");
         blog.setTag("java");*/
         test_service.insert(blog);
-        List<Blog> blogs = test_service.select();
-        model.addAttribute("blogs",blogs);
-        return "index";
+        int total = test_service.count();
+        //插入数据后 默认返回第一页
+        List<Blog> blogs = test_service.limit_blog(1,pageNumber);
+        limit.setBlogs(blogs);
+        limit.setTotal(total);
+        limit.setPage(1);
+        model.addAttribute("limit",limit);
+        return "redirect:/";
     }
 }
