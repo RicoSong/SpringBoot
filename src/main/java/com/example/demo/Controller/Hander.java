@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -34,9 +36,12 @@ public class Hander {
         System.out.println(firstPage+" "+pageNumber);
 
         List<Blog> blogs = test_service.limit_blog(firstPage,pageNumber);
+        //修改text的长度
+
         limit.setPage(firstPage);
         limit.setTotal(total);
         limit.setBlogs(blogs);
+
         model.addAttribute("limit",limit);
         System.out.println(blogs);
         return "index";
@@ -45,6 +50,10 @@ public class Hander {
     @RequestMapping("/insert")
     public String insert(Blog blog,Model model){
         System.out.println(blog.getTitle()+" "+blog.getText()+" "+blog.getTag());
+        Date date  = new Date();
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        String s = df.format(date);
+        blog.setDate(s);
 /*        Blog blog = new Blog();
         blog.setTitle("rico");
         blog.setText("welcome to tihs page");

@@ -17,17 +17,26 @@
 
 <div class="container-fluid divmain">
     <div class="row">
-        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 divleft">
             <div class="media textdiv" th:each="blogg:${limit.getBlogs()}">
-                <div class="media-left" >
-                    <a th:href="@{'/details?id='+${blogg.getId()}}">
+                <!--<div class="media-left" >
+                    <a th:href="@{'/details/'+${blogg.getId()}}">
                         <img class="media-object" src="image/1.png">
+                    </a>
+                </div>-->
+                <div class="align-items-center">
+                    <span class="label label-warning" >原创</span>
+                    <a th:href="@{'/details/'+${blogg.getId()}}" th:text="${blogg.getTitle()}">
                     </a>
                 </div>
                 <div class="media-body">
                   <!--  <h3><span th:text="${blogg.getId()}"></span></h3>-->
-                    <h4 class="media-heading" th:text="${blogg.getTitle()}"></h4>
-                    <span th:text="${blogg.getText()}"></span>
+<!--                    <h4 class="media-heading" >
+                        <a th:text="${blogg.getTitle()}" th:href="@{'/details/'+${blogg.getId()}}"></a>
+                    </h4>-->
+                    <a th:text="${blogg.getText()}" th:href="@{'/details/'+${blogg.getId()}}"></a>
+                    <br/>
+                    <span th:text="${blogg.getDate()}"></span>
                 </div>
             </div>
         </div>

@@ -3,8 +3,9 @@ body{
     padding-top: 70px;
 }
 .divmain{
-     margin-left: 10%;
-     margin-right: 10%;
+ /*    margin-left: 10%;
+     margin-right: 10%;*/
+    max-width: 892px;
      margin-top: 20px;
      background-color: white;
  }
@@ -18,4 +19,7 @@ body{
 }
 .textdiv{
     margin: 15px;
+}
+.divleft{
+    margin-top: 20px;
 }

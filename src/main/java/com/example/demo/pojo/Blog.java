@@ -8,4 +8,6 @@ public class Blog {
     private String text;
     private String tag;
     private Integer id;
+    //时间
+    private String date;
 }

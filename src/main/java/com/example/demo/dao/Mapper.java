@@ -14,7 +14,7 @@ package com.example.demo.dao;
 public interface Mapper {
     @Select("select * from user ")
     List<Blog>  select();
-    @Insert("insert into user(title,text,tag) value(#{title},#{text},#{tag})")
+    @Insert("insert into user(title,text,tag,date) value(#{title},#{text},#{tag},#{date})")
     void insert(Blog blog);
 
     @Select("select count(*) from user")
