@@ -22,7 +22,6 @@ public class Hander {
     private limitCode limit = new limitCode();
     @RequestMapping("/")
     public String select_limit(@RequestParam(value = "page",defaultValue = "1") String page, Model model ) {
-
        // System.out.println("page="+page);
         //获取总页数
         int total = test_service.count();
@@ -47,7 +46,7 @@ public class Hander {
         return "index";
     }
 
-    @RequestMapping("/insert")
+    @PostMapping("/insert")
     public String insert(Blog blog,Model model){
         System.out.println(blog.getTitle()+" "+blog.getText()+" "+blog.getTag());
         Date date  = new Date();
