@@ -15,7 +15,7 @@
 <div th:insert="thymeleaf_header :: header"></div>
 <div class="container-fluid divmain">
     <div class="row">
-        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" >
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
             <h2> <span class="glyphicon  glyphicon-send" aria-hidden="true"></span>发起</h2>
             <hr>
             <form action="insert" method="post">
@@ -25,24 +25,20 @@
                 </div>
                 <div class="form-group">
                     <label for="title">提交内容</label>
-                    <textarea class="form-control" name="text" id="description" cols="30" rows="10">
-
+                    <textarea class="form-control" name="text" id="text" cols="30" rows="10">
                     </textarea>
                 </div>
                 <div class="form-group">
                     <label for="title">标签</label>
                     <input type="text" class="form-control" id="tag" name="tag" placeholder="输入标签以逗号分隔">
                 </div>
+                <div class="form-group">
+                    <label for="title">描述信息</label>
+                    <textarea class="form-control" name="description" id="description" cols="30" rows="10">
+                    </textarea>
+                </div>
                 <button type="submit" class="btn btn-success submitbootn">Submit</button>
             </form>
-        </div>
-        <div class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 " >
-            <h3>Rico'tag</h3>
-                welcome to rico blog<br>
-                hello world<br>
-                pentakill<br>
-                lose<br>
-                jack<br>
         </div>
     </div>
 </div>

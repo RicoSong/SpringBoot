@@ -1,5 +1,6 @@
 package com.example.demo.Controller;
 
+import com.example.demo.Service.PageNmber;
 import com.example.demo.Service.Test_Service;
 import com.example.demo.pojo.Blog;
 import com.example.demo.utils.limitCode;
@@ -22,41 +23,30 @@ public class Hander {
     private limitCode limit = new limitCode();
     @RequestMapping("/")
     public String select_limit(@RequestParam(value = "page",defaultValue = "1") String page, Model model ) {
-       // System.out.println("page="+page);
         //获取总页数
         int total = test_service.count();
-      //设置默认参数，首次访问
+      //获取当前page
         int firstPage=Integer.parseInt(page);
-        //判断接受的page 是否为空
-     /*   if(page!=0){
-            firstPage=page;
-        }*/
-       // int thispage=(firstPage+1)*pageNumber;
-        System.out.println(firstPage+" "+pageNumber);
 
+        //返回分页需要的page
+        PageNmber pagenumber = new PageNmber();
+        List<Integer> thispage = pagenumber.page(firstPage,total);
         List<Blog> blogs = test_service.limit_blog(firstPage,pageNumber);
-        //修改text的长度
-
+        //更新limit
         limit.setPage(firstPage);
         limit.setTotal(total);
         limit.setBlogs(blogs);
-
+        limit.setList(thispage);
         model.addAttribute("limit",limit);
-        System.out.println(blogs);
         return "index";
     }
-
+    //get请求可能导致数据超出限制长度
     @PostMapping("/insert")
     public String insert(Blog blog,Model model){
-        System.out.println(blog.getTitle()+" "+blog.getText()+" "+blog.getTag());
         Date date  = new Date();
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         String s = df.format(date);
         blog.setDate(s);
-/*        Blog blog = new Blog();
-        blog.setTitle("rico");
-        blog.setText("welcome to tihs page");
-        blog.setTag("java");*/
         test_service.insert(blog);
         int total = test_service.count();
         //插入数据后 默认返回第一页

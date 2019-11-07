@@ -18,65 +18,50 @@
 <div class="container-fluid divmain">
     <div class="row">
         <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 divleft">
-            <div class="media textdiv" th:each="blogg:${limit.getBlogs()}">
-                <!--<div class="media-left" >
-                    <a th:href="@{'/details/'+${blogg.getId()}}">
-                        <img class="media-object" src="image/1.png">
-                    </a>
-                </div>-->
+            <div class="media textdiv" th:each="blogg:${limit.getBlogs()}" style="line-height: 1.7em;">
                 <div class="align-items-center">
-                    <span class="label label-warning" >原创</span>
-                    <a th:href="@{'/details/'+${blogg.getId()}}" th:text="${blogg.getTitle()}">
+                    <span class="label label-warning">原创</span>
+                    <a class="decoration" th:href="@{'/details/'+${blogg.getId()}}" th:text="${blogg.getTitle()}">
                     </a>
                 </div>
                 <div class="media-body">
-                    <!--  <h3><span th:text="${blogg.getId()}"></span></h3>-->
-                    <!--                    <h4 class="media-heading" >
-                                            <a th:text="${blogg.getTitle()}" th:href="@{'/details/'+${blogg.getId()}}"></a>
-                                        </h4>-->
-                    <a th:text="${blogg.getText()}" th:href="@{'/details/'+${blogg.getId()}}"></a>
+                    <a class="decoration" th:text="${blogg.getDescription()}" th:href="@{'/details/'+${blogg.getId()}}"
+                       style="line-height: 1.7em;"></a>
                     <br/>
                     <span th:text="${blogg.getDate()}"></span>
                 </div>
             </div>
         </div>
         <div class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
-            <!--            <h3>Rico'style</h3>
-                        welcome to rico blog<br>
-                        热门文章<br>
-                        page<br>
-                        lose<br>
-                        jack<br>-->
             <div class="list-group">
                 <a href="#" class="list-group-item active">
-                    Cras justo odio
+                    标签
                 </a>
-                <a href="#" class="list-group-item ">welcome to rico blog</a>
-                <a href="#" class="list-group-item">热门文章</a>
-                <a href="#" class="list-group-item">Balabala</a>
-                <a href="#" class="list-group-item">Style</a>
+                <a href="#" class="list-group-item ">SpringBoot</a>
+                <a href="#" class="list-group-item">Java</a>
+                <a href="#" class="list-group-item">JavaScript</a>
+                <a href="#" class="list-group-item">Thymeleaf</a>
             </div>
         </div>
     </div>
     <div class="container-fluid divmain">
         <div class="row">
             <nav aria-label="Page navigation" class="col-lg-9 col-md-9 col-sm-12 col-xs-12 text-center">
-                <ul class="pagination" >
+                <ul class="pagination">
                     <li th:if="${limit.getPage()!=1}">
                         <a th:href="@{'?page='+${limit.getPage()-1}}" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
+                            <!--<span aria-hidden="true">&laquo;</span>-->
+                            <span class="glyphicon glyphicon-menu-left"></span>
                         </a>
                     </li>
-                    <li><a th:href="@{'?page='+${limit.getPage()}}" th:text="${limit.getPage()}"> </a></li>
-                    <li><a th:href="@{'?page='+${limit.getPage()+1}}" th:text="${limit.getPage()+1}"> </a></li>
-                    <li><a th:href="@{'?page='+${limit.getPage()+2}}" th:text="${limit.getPage()+2}"> </a></li>
-                    <!-- <li><a href="?page=2">2</a></li>
-                     <li><a href="?page=3">3</a></li>
-                     <li><a href="?page=4">4</a></li>
-                     <li><a href="?page=5">5</a></li>-->
+                    <li th:each="page:${limit.getList()}" th:class="${limit.getPage()==page}?'active':''">
+                        <a th:text="${page}" th:href="@{'?page='+${page}}">
+                        </a>
+                    </li>
                     <li th:if="${limit.getPage()!=limit.getTotal()}">
                         <a th:href="@{'?page='+${limit.getPage()+1}}" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
+                            <!--                            <span aria-hidden="true">&raquo;</span>-->
+                            <span class="glyphicon glyphicon-menu-right"></span>
                         </a>
                     </li>
                 </ul>
@@ -84,6 +69,27 @@
         </div>
     </div>
 </div>
+<nav class="navbar navbar-inverse footer" role="navigation">
+    <div class="container-fluid" style="max-width: 892px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<!--                <p class="navbar-text">Rico</p>
+                <ul class="navbar-text list-inline">
+                    <li>GitHub</li>
+                    <li>About</li>
+                    <li>邮箱</li>
+                </ul>-->
+                <span class="navbar-text">Rico的个人博客</span>
+                <br/>
+                <span class="navbar-text">渝ICP备19013627</span>
+                <br/>
+                <span class="navbar-text">CQUCC</span>
+                <br/>
+                <span class="navbar-text">songrui12138@gmail.com</span>
+            </div>
+        </div>
+    </div>
+</nav>
 <script
         src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"

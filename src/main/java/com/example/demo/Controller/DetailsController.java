@@ -22,11 +22,6 @@ public class DetailsController {
         Blog blog = test_service.findbyId(id);
         model.addAttribute("blog",blog);
 
-        //测试数据
-        System.out.println(blog.getId());
-        System.out.println(blog.getTitle());
-        System.out.println(blog.getTag());
-        System.out.println(blog.getText());
         return "Details_page";
     }
 }

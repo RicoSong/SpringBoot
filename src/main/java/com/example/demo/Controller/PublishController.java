@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class PublishController {
         @RequestMapping("/publish")
         public String publish(@RequestParam(value = "rico",defaultValue = "kiel") String rico){
-            System.out.println("Rico number one"+rico);
             return "publish";
         }
 }

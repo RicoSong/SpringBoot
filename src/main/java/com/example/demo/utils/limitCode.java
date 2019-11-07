@@ -11,4 +11,6 @@ public class limitCode {
     private int page;
     private int total;
     private List<Blog> blogs;
+    //分页信息
+    private List<Integer> list;
 }

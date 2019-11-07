@@ -1,25 +1,52 @@
-body{
+body {
     background: #efefef;
     padding-top: 70px;
 }
-.divmain{
- /*    margin-left: 10%;
-     margin-right: 10%;*/
+
+.divmain {
+    /*    margin-left: 10%;
+        margin-right: 10%;*/
     max-width: 892px;
-     margin-top: 20px;
-     background-color: white;
- }
-.divright{
+    margin-top: 20px;
+    background-color: snow;
+}
+
+.divright {
     border: 1px silver;
     margin: 15px;
 }
-.submitbootn{
+
+.submitbootn {
     float: right;
     margin-bottom: 15px;
 }
-.textdiv{
+
+.textdiv {
     margin: 15px;
 }
-.divleft{
+
+.divleft {
     margin-top: 20px;
+}
+
+/*设置响应式图片*/
+#div_text p img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*清除a 标签的下划线*/
+.decoration {
+    text-decoration: none !important;
+}
+
+.footer {
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+    margin-top: 180px;
+    margin-bottom: 0px;
+    height: 130px;
+
 }
