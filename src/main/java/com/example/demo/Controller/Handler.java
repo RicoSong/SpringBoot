@@ -15,7 +15,7 @@ import java.util.Date;
 import java.util.List;
 
 @Controller
-public class Hander {
+public class Handler {
     @Autowired
     private Test_Service test_service;
     @Value("${pageNumber}")
