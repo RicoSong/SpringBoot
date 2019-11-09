@@ -4,6 +4,10 @@ spring:
     driverClassName: com.mysql.jdbc.Driver
     username: root
     password: 123456
+  #禁用缓存+ctrl+f9页面重新编译 实时生效
+  thymeleaf:
+    cache: false
 server:
   port: 80
 pageNumber: 8
+
