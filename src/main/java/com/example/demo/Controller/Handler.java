@@ -37,6 +37,7 @@ public class Handler {
         limit.setBlogs(blogs);
         limit.setList(thispage);
         model.addAttribute("limit",limit);
+        System.out.println("rico nuber one");
         return "index";
     }
     //get请求可能导致数据超出限制长度
