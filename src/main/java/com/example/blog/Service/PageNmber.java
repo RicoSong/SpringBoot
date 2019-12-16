@@ -1,4 +1,4 @@
-package com.example.demo.Service;
+package com.example.blog.Service;
 
 import java.util.ArrayList;
 import java.util.List;

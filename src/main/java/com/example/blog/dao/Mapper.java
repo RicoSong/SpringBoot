@@ -1,6 +1,6 @@
-package com.example.demo.dao;
+package com.example.blog.dao;
 
-import com.example.demo.pojo.Blog;
+import com.example.blog.pojo.Blog;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;

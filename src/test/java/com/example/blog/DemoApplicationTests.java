@@ -1,7 +1,7 @@
-package com.example.demo;
+package com.example.blog;
 
-import com.example.demo.Service.Test_Service;
-import com.example.demo.pojo.Blog;
+import com.example.blog.Service.Test_Service;
+import com.example.blog.pojo.Blog;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

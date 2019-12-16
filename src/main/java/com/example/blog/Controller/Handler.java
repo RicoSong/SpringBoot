@@ -1,9 +1,9 @@
-package com.example.demo.Controller;
+package com.example.blog.Controller;
 
-import com.example.demo.Service.PageNmber;
-import com.example.demo.Service.Test_Service;
-import com.example.demo.pojo.Blog;
-import com.example.demo.utils.limitCode;
+import com.example.blog.Service.PageNmber;
+import com.example.blog.Service.Test_Service;
+import com.example.blog.pojo.Blog;
+import com.example.blog.utils.limitCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;

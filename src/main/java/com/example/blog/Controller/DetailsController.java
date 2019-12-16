@@ -1,7 +1,7 @@
-package com.example.demo.Controller;
+package com.example.blog.Controller;
 
-import com.example.demo.Service.Test_Service;
-import com.example.demo.pojo.Blog;
+import com.example.blog.Service.Test_Service;
+import com.example.blog.pojo.Blog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

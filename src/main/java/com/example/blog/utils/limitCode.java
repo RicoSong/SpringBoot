@@ -1,6 +1,6 @@
-package com.example.demo.utils;
+package com.example.blog.utils;
 
-import com.example.demo.pojo.Blog;
+import com.example.blog.pojo.Blog;
 import lombok.Data;
 
 import java.util.List;

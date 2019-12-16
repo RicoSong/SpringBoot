@@ -1,7 +1,7 @@
-package com.example.demo.Service;
+package com.example.blog.Service;
 
-import com.example.demo.dao.Mapper;
-import com.example.demo.pojo.Blog;
+import com.example.blog.dao.Mapper;
+import com.example.blog.pojo.Blog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
